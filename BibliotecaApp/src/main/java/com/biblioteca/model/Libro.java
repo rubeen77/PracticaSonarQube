@@ -1,10 +1,10 @@
 package com.biblioteca.model;
 
-
+// Code smell: clase con campo público (violación encapsulación)
 public class Libro {
 
-    public String titulo;
-    public String autor;
+    public String titulo;       // Code smell: campo público
+    public String autor;        // Code smell: campo público
     private int anio;
     private boolean disponible;
     private String isbn;

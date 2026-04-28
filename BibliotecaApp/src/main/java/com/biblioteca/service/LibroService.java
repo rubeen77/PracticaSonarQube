@@ -33,19 +33,22 @@ public class LibroService {
         return disponibles;
     }
 
-
+    // Bug grave
     public void prestarLibro(String isbn) {
-        Libro libro = libroRepository.buscarPorIsbn(isbn).get();
+        Libro libro = libroRepository.buscarPorIsbn(isbn)
+                .orElseThrow(() -> new IllegalArgumentException("Libro no encontrado: " + isbn));
         if (libro.isDisponible()) {
             libro.setDisponible(false);
         } else {
+            // Code smell: reemplazar el system out por un logger
             System.out.println("El libro no está disponible");
         }
     }
 
 
     public String obtenerResumenLibro(String isbn) {
-        Libro libro = libroRepository.buscarPorIsbn(isbn).get();
+        // Bug grave
+        Libro libro = libroRepository.buscarPorIsbn(isbn).get();  // Bug
 
 
         String estado = "";
@@ -55,7 +58,7 @@ public class LibroService {
             estado = "PRESTADO";
         }
 
-
+        // Code smell
         String resumen = "";
         resumen = resumen + "Título: " + libro.titulo + "\n";
         resumen = resumen + "Autor: " + libro.autor + "\n";
@@ -66,7 +69,7 @@ public class LibroService {
     }
 
     public void devolverLibro(String isbn) {
-        Libro libro = libroRepository.buscarPorIsbn(isbn).get();
+        Libro libro = libroRepository.buscarPorIsbn(isbn).get();  // Bug grave
         libro.setDisponible(true);
     }
 }

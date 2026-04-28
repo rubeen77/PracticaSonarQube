@@ -4,7 +4,7 @@ public class Usuario {
 
     private String nombre;
     private String email;
-    private String password;
+    private String password;  // Security Hotspot: contraseña en String
 
     public Usuario(String nombre, String email, String password) {
         this.nombre = nombre;
