@@ -1,0 +1,5 @@
+com\biblioteca\model\Libro.class
+com\biblioteca\service\LibroService.class
+com\biblioteca\model\Usuario.class
+com\biblioteca\util\PasswordUtil.class
+com\biblioteca\repository\LibroRepository.class

@@ -1,0 +1,5 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+BibliotecaApp,com.biblioteca.model,Libro,14,25,0,0,6,10,4,3,4,3
+BibliotecaApp,com.biblioteca.model,Usuario,33,0,0,0,14,0,7,0,7,0
+BibliotecaApp,com.biblioteca.util,PasswordUtil,53,0,2,0,10,0,4,0,3,0
+BibliotecaApp,com.biblioteca.service,LibroService,41,69,2,6,11,20,2,8,1,5

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Libro.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">BibliotecaApp</a> &gt; <a href="index.source.html" class="el_package">com.biblioteca.model</a> &gt; <span class="el_source">Libro.java</span></div><h1>Libro.java</h1><pre class="source lang-java linenums">package com.biblioteca.model;
+
+
+public class Libro {
+
+    public String titulo;
+    public String autor;
+    private int anio;
+    private boolean disponible;
+    private String isbn;
+
+<span class="fc" id="L12">    public Libro(String titulo, String autor, int anio, String isbn) {</span>
+<span class="fc" id="L13">        this.titulo = titulo;</span>
+<span class="fc" id="L14">        this.autor = autor;</span>
+<span class="fc" id="L15">        this.anio = anio;</span>
+<span class="fc" id="L16">        this.isbn = isbn;</span>
+<span class="fc" id="L17">        this.disponible = true;</span>
+<span class="fc" id="L18">    }</span>
+
+    public int getAnio() {
+<span class="nc" id="L21">        return anio;</span>
+    }
+
+    public void setAnio(int anio) {
+<span class="nc" id="L25">        this.anio = anio;</span>
+<span class="nc" id="L26">    }</span>
+
+    public boolean isDisponible() {
+<span class="fc" id="L29">        return disponible;</span>
+    }
+
+    public void setDisponible(boolean disponible) {
+<span class="fc" id="L33">        this.disponible = disponible;</span>
+<span class="fc" id="L34">    }</span>
+
+    public String getIsbn() {
+<span class="nc" id="L37">        return isbn;</span>
+    }
+
+    public void setIsbn(String isbn) {
+<span class="nc" id="L41">        this.isbn = isbn;</span>
+<span class="nc" id="L42">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.10.202304240956</span></div></body></html>
