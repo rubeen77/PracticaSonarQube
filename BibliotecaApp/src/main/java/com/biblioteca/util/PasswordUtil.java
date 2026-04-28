@@ -9,8 +9,8 @@ public class PasswordUtil {
 
     public static String hashPassword(String password) {
         try {
-            // Security hotspot
-            MessageDigest md = MessageDigest.getInstance("MD5");
+            // Security hotspot solucionado
+            MessageDigest md = MessageDigest.getInstance("SHA-256");
             byte[] hash = md.digest(password.getBytes());
             StringBuilder sb = new StringBuilder();
             for (byte b : hash) {

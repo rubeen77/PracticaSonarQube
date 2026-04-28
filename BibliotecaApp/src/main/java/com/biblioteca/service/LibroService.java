@@ -35,7 +35,7 @@ public class LibroService {
 
 
     public void prestarLibro(String isbn) {
-        Libro libro = libroRepository.buscarPorIsbn(isbn)
+        Libro libro = libroRepository.buscarPorIsbn(isbn)  // Bug corregido
                 .orElseThrow(() -> new IllegalArgumentException("Libro no encontrado: " + isbn));
         if (libro.isDisponible()) {
             libro.setDisponible(false);
@@ -47,7 +47,7 @@ public class LibroService {
 
 
     public String obtenerResumenLibro(String isbn) {
-        Libro libro = libroRepository.buscarPorIsbn(isbn)
+        Libro libro = libroRepository.buscarPorIsbn(isbn)  // Bug corregido
                 .orElseThrow(() -> new IllegalArgumentException("Libro no encontrado: " + isbn));
 
 
@@ -69,7 +69,8 @@ public class LibroService {
     }
 
     public void devolverLibro(String isbn) {
-        Libro libro = libroRepository.buscarPorIsbn(isbn).get();  // Bug grave
+        Libro libro = libroRepository.buscarPorIsbn(isbn) // Bug corregido
+                .orElseThrow(() -> new IllegalArgumentException("Libro no encontrado: " + isbn));
         libro.setDisponible(true);
     }
 }
