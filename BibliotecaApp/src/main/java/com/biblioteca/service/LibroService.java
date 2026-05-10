@@ -26,7 +26,7 @@ public class LibroService {
 
 
         for (Libro l : todos) {
-            if (l.isDisponible() == true) {
+            if (l.isDisponible()) {
                 disponibles.add(l);
             }
         }
