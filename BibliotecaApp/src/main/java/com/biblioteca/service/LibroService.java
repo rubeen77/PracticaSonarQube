@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class LibroService {
-
+    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(LibroService.class.getName());
     private LibroRepository libroRepository;
 
     public LibroService(LibroRepository libroRepository) {
@@ -40,8 +40,8 @@ public class LibroService {
         if (libro.isDisponible()) {
             libro.setDisponible(false);
         } else {
-            // Code smell: reemplazar el system out por un logger
-            System.out.println("El libro no está disponible");
+            // Code smell solucionado
+            logger.warning("El libro no está disponible: " + isbn);;
         }
     }
 
