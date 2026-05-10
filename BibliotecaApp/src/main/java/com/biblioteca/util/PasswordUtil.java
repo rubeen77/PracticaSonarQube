@@ -23,9 +23,6 @@ public class PasswordUtil {
         }
     }
 
-    // Code smell
-    // No se usa
-    private static boolean validarFormatoEmail(String email) {
-        return email.contains("@");
+
     }
-}
+
