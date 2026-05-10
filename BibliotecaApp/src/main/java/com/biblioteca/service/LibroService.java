@@ -60,8 +60,8 @@ public class LibroService {
 
         // Code smell
         String resumen = "";
-        resumen = resumen + "Título: " + libro.titulo + "\n";
-        resumen = resumen + "Autor: " + libro.autor + "\n";
+        resumen = resumen + "Título: " + libro.getTitulo() + "\n";
+        resumen = resumen + "Autor: " + libro.getAutor() + "\n";
         resumen = resumen + "Año: " + libro.getAnio() + "\n";
         resumen = resumen + "Estado: " + estado + "\n";
 

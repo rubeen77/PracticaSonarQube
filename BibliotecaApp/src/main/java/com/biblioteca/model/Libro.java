@@ -3,8 +3,8 @@ package com.biblioteca.model;
 // Code smell: clase con campo público (violación encapsulación)
 public class Libro {
 
-    public String titulo;       // Code smell: campo público
-    public String autor;        // Code smell: campo público
+    private String titulo;
+    private String autor;      // Code smell: campo público
     private int anio;
     private boolean disponible;
     private String isbn;
@@ -40,4 +40,7 @@ public class Libro {
     public void setIsbn(String isbn) {
         this.isbn = isbn;
     }
+    public String getTitulo() { return titulo; }
+    public String getAutor() { return autor; }
 }
+
